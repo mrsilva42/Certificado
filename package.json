@@ -1,0 +1,16 @@
+{
+  "name": "certificado",
+  "version": "1.0.0",
+  "description": "gerador de certificado de curso em pdf",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maria",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "puppeteer": "^10.0.0"
+  }
+}
