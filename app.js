@@ -1,5 +1,3 @@
-'use strict'
-
 //importando os modulos
 const fs = require("fs");
 const path = require("path");
@@ -14,16 +12,17 @@ async function criaPDF(data){
         //compilando o templateHtml usando handlebars
 	    var template = handlebars.compile(templateHtml);
 	    var html = template(data);
+		
 
-	    var milis = new Date();
-	    milis = milis.getTime();
+	    // var milis = new Date();
+	    // milis = milis.getTime();
 
-	    var pdfPath = path.join('pdf', `${data.name}-${milis}.pdf`);
+	    var pdfPath = path.join(process.cwd(), `${data.name}.pdf`);
 
 	    var options = {
 	    	width: '1230px',
-	    	headerTemplate: "<p></p>",
-	    	footerTemplate: "<p></p>",
+	    	headerTemplate: "<p>Certificado de conclusão de curso</p>",
+	    	footerTemplate: "<p>Ciência da Computação</p>",
 	    	displayHeaderFooter: false,
 	    	margin: {
 	    		top: "10px",

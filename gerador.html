@@ -62,11 +62,10 @@
             }
         </style>
         <meta charset="utf-8">
-
     </head>
-    <body>
-        <script src="https://d3js.org/d3.v5.min.js"></script>
 
+
+    <body>
         <div class="report-header">
             <img src="logo.png" class="logo">
             <h3>{{title}}</h3>
@@ -88,6 +87,12 @@
         <div class="report-footer">
             Faculdades Integradas do Brasil. Todos os direitos reservados.
         </div>
+
+    <script>
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+        document.body.appendChild(canvas)
+        });
+    </script>
 
     </body>
 </html>
